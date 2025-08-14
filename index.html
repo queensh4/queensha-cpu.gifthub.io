@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>good stationary — Toko Alat Tulis Queensha</title>
+  <meta name="description" content="good stationary: Toko alat tulis kininian milik Queensha. Pensil, pulpen, buku catatan, dan banyak lagi!"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="good stationary logo">
+        <span class="logo-mark" aria-hidden="true">✿</span>
+        <span class="logo-text">good <strong>stationary</strong></span>
+      </a>
+      <nav class="nav">
+        <a href="#produk">Produk</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <div class="actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Ganti tema">🌙</button>
+        <button class="btn cart-btn" id="openCart" aria-label="Buka keranjang">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12L6 6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M6 6l-2-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="9.5" cy="20" r="1.5" fill="currentColor"/>
+            <circle cx="17.5" cy="20" r="1.5" fill="currentColor"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="hero">
+    <div class="slider" id="slider" aria-label="Slider promosi">
+      <div class="slide s1">
+        <div class="container slide-inner">
+          <h1>Koleksi Alat Tulis <span class="highlight">Kekinian</span></h1>
+          <p>Halo, aku <strong>Queensha</strong> — selamat datang di <strong>good stationary</strong>. Temukan alat tulis lucu dan fungsional untuk hari produktifmu!</p>
+          <a href="#produk" class="btn primary">Belanja Sekarang</a>
+        </div>
+      </div>
+      <div class="slide s2">
+        <div class="container slide-inner">
+          <h1>Tema <span class="highlight">Pastel</span> yang Ceria</h1>
+          <p>Warna dasar pink & kuning yang bikin semangat nulis, belajar, dan berkarya.</p>
+          <a href="#produk" class="btn secondary">Lihat Produk</a>
+        </div>
+      </div>
+      <div class="slide s3">
+        <div class="container slide-inner">
+          <h1>Diskon <span class="highlight">Spesial</span> Minggu Ini</h1>
+          <p>Bundle notebook + highlighter hemat s.d. 30%*. Buruan sebelum kehabisan!</p>
+          <a href="#produk" class="btn outline">Ambil Promonya</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- Produk -->
+  <main class="container">
+    <section id="produk" class="section">
+      <div class="section-head">
+        <h2>Produk Pilihan</h2>
+        <div class="filters">
+          <input type="search" id="search" placeholder="Cari pulpen, notebook, stiker..." aria-label="Cari produk"/>
+          <select id="sort">
+            <option value="populer">Paling Populer</option>
+            <option value="murah">Harga Termurah</option>
+            <option value="mahal">Harga Termahal</option>
+            <option value="baru">Terbaru</option>
+          </select>
+        </div>
+      </div>
+      <div id="productGrid" class="grid"></div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="section about">
+      <div class="about-card">
+        <h3>Tentang <span class="highlight">good stationary</span></h3>
+        <p><strong>Queensha</strong> memulai good stationary dari kecintaan pada alat tulis yang fungsional namun tetap gemas. Kami percaya, alat tulis yang tepat bisa memantik ide-ide besar.</p>
+        <ul class="checks">
+          <li>✦ Kurasi produk berkualitas</li>
+          <li>✦ Harga ramah pelajar</li>
+          <li>✦ Pengiriman cepat</li>
+        </ul>
+      </div>
+      <div class="about-art" aria-hidden="true">
+        <img src="assets/pastel-shapes.svg" alt="" loading="lazy"/>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="section contact">
+      <div class="contact-card">
+        <h3>Butuh Bantuan?</h3>
+        <p>Kirim pesan ke kami, tim <strong>good stationary</strong> siap bantu. 💌</p>
+        <form id="contactForm">
+          <div class="two">
+            <input required name="nama" placeholder="Nama"/>
+            <input required type="email" name="email" placeholder="Email"/>
+          </div>
+          <textarea required name="pesan" rows="3" placeholder="Pesan kamu"></textarea>
+          <button class="btn primary" type="submit">Kirim</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="logo small"><span class="logo-mark">✿</span> good <strong>stationary</strong></div>
+        <p class="muted">© <span id="year"></span> Queensha. All rights reserved.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#produk">Produk</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Keranjang (Drawer) -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Keranjang belanja">
+    <div class="drawer-header">
+      <h3>Keranjang</h3>
+      <button class="btn ghost" id="closeCart" aria-label="Tutup keranjang">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="drawer-footer">
+      <div class="total">
+        <span>Total</span><strong id="cartTotal">Rp0</strong>
+      </div>
+      <button class="btn primary" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" tabindex="-1" aria-hidden="true"></div>
+
+  <!-- Checkout Modal -->
+  <dialog id="checkoutModal" class="checkout-modal">
+    <form id="checkoutForm" method="dialog" class="checkout-form">
+      <div class="modal-head">
+        <h3>Checkout</h3>
+        <button class="btn ghost" id="closeCheckout" aria-label="Tutup checkout">✕</button>
+      </div>
+      <div class="two">
+        <input required name="nama" placeholder="Nama penerima" />
+        <input required type="email" name="email" placeholder="Email" />
+      </div>
+      <input required name="alamat" placeholder="Alamat lengkap" />
+      <div class="two">
+        <input required name="kota" placeholder="Kota" />
+        <input required name="kodepos" placeholder="Kode Pos" />
+      </div>
+      <select required name="metode">
+        <option value="">Pilih metode pembayaran</option>
+        <option>Transfer Bank</option>
+        <option>VA</option>
+        <option>COD</option>
+        <option>E-Wallet</option>
+      </select>
+      <button class="btn primary" type="submit">Bayar Sekarang</button>
+      <p class="muted tiny">*Ini demo checkout untuk GitHub Pages (tidak memproses pembayaran nyata).</p>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
